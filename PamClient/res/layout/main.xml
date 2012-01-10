@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout   xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<ScrollView
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:id="@+id/scroll"
+    >
+<TextView android:id="@+id/converstation" android:text="" android:layout_width="fill_parent" android:layout_height="fill_parent"></TextView>
+</ScrollView>
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text=""
+    />
+<EditText android:layout_height="wrap_content" android:id="@+id/content" android:layout_width="fill_parent">
+    <requestFocus></requestFocus>
+</EditText>
+<Button android:id="@+id/send" android:text="@string/send" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="right" android:layout_marginRight="10dp"></Button>
+<EditText android:layout_width="fill_parent" android:id="@+id/id" android:layout_height="wrap_content" android:text="460021011508245"></EditText>
+</LinearLayout>
+

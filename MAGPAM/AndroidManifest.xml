@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.anheinno.pam"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="7" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<permission android:name="com.anhe_inno.pam.permission.SEND" android:label="@string/permission_send_description" android:description="@string/permission_send_description" android:protectionLevel="signatureOrSystem"></permission>
+	<permission android:name="com.anhe_inno.pam.permission.RECEIVE" android:label="@string/permission_receive_description" android:description="@string/permission_receive_description" android:protectionLevel="signatureOrSystem"></permission>
+	<uses-permission android:name="com.anhe_inno.pam.permission.RECEIVE"/>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	
+    <application android:icon="@drawable/icon" android:name=".libs.application.Application">
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/app_name" android:name=".PamActivity">
+        	<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.INSERT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="vnd.android.cursor.dir/contact" />
+			</intent-filter>
+			
+			<intent-filter>
+				<action android:name="android.intent.action.SEND" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="text/plain" />
+			</intent-filter>
+			
+        </activity>
+        <receiver android:name=".receiver.MessageReceiver" android:permission="com.anhe_inno.pam.permission.SEND">
+        	<intent-filter>
+        		<action android:name="com.anheinno.intent.action.SEND" />
+        	</intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.BootCompletedReceiver">
+        	<intent-filter >
+        		<action android:name="android.intent.action.BOOT_COMPLETED" />
+        	</intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.ConnectivityChangeReceiver">
+        	<intent-filter >
+        		<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+        	</intent-filter>
+        </receiver>
+        <service android:name=".service.PamService"></service>
+        <receiver android:name=".receiver.PushController"></receiver>
+        <receiver android:permission="android.permission.BATTERY_STATS" android:name=".receiver.BatteryReceiver">
+        	<intent-filter> 
+         		<action android:name="android.intent.action.BATTERY_CHANGED"/>
+    		</intent-filter> 
+        </receiver>
+    </application>
+</manifest>

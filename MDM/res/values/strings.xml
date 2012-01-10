@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">安和创新设备管理员</string>
+    <string name="description">安和创新设备管理员，助力企业IT人员统一管理企业移动设备。</string>
+    <string name="enable">启用设备管理员</string>
+    <string name="disable">停用设备管理员</string>
+    <string name="function">功能列表:</string>
+    <string name="list">1. 重置终端密码\n2. 设置是否加密终端存储（仅Android 3.0以上版本ROM支持）\n3. 强制锁屏\n4. 远程摧毁数据（恢复为出场设置）\n5. 设置最大密码重试次数\n6. 设置闲置超时时间\n7. 设置密码最短长度\n8. 设置密码质量</string>
+    <string name="enable_notify">启用安和创新设备管理员</string>
+    <string name="disable_notify">停用安和创新设备管理员</string>
+    <string name="pwd_change_notify">安和创新设备管理员: 密码已更改</string>
+    <string name="pwd_failed_notify">安和创新设备管理员: 密码失败</string>
+    <string name="pwd_succ_notify">安和创新设备管理员: 密码成功</string>
+    <string name="warning">安和创新设备管理员: 警告依据公司IT策略禁止私自停用设备管理员！</string>
+    <string name="warning_info">警告依据公司IT策略禁止私自停用设备管理员！违者将依据公司相关处罚条例进行处理！</string>
+    <string name="login">登陆安和创新设备管理员</string>
+</resources>

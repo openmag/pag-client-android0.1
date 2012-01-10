@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MAGPAM</string>
+    <string name="send">发送</string>
+    <string name="permission_send_label">发送</string>
+    <string name="permission_send_description">通过安和创新推送平台发送数据</string>
+    <string name="permission_receive_label">接收</string>
+    <string name="permission_receive_description">通过安和创新推送平台接收数据</string>
+</resources>
